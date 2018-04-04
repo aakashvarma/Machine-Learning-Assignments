@@ -58,8 +58,8 @@ def main():
 	testSet=[]
 	split = 0.67
 	loadDataset('iris.data', split, trainingSet, testSet)
-	print 'Train set: ' + repr(len(trainingSet))
-	print 'Test set: ' + repr(len(testSet))
+	print ('Train set: ' + repr(len(trainingSet)))
+	print ('Test set: ' + repr(len(testSet)))
 	# generate predictions
 	predictions=[]
 	k = 3
