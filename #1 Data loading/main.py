@@ -8,8 +8,22 @@ raw_data = open(filename, 'r')
 reader = csv.reader(raw_data, delimiter = ',', quoting = csv.QUOTE_NONE)
 x = list(reader)
 df = pd.DataFrame(x)
-print(df.shape)
-print(df.head())
+
+# Renaming header
+df.columns = df.iloc[0]
+df = df[1:]
+
+# Data dimensions
+print (df.shape)
+
+# Data types
+print(df.dtypes)
+
+# Descriptive Statistics
+print (df.describe())
+
+# Correlation
+print (df.corr(method = 'pearson'))
 
 
 
