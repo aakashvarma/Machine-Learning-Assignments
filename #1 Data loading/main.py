@@ -13,6 +13,9 @@ df = pd.DataFrame(x)
 df.columns = df.iloc[0]
 df = df[1:]
 
+# Convert 'object datatype to 'numeric (float)' datatype
+df = df.apply(pd.to_numeric, downcast = 'float', errors='ignore')
+
 # Data dimensions
 print (df.shape)
 
