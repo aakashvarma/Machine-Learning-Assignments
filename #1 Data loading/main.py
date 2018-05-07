@@ -3,6 +3,7 @@
 import csv
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 filename = 'diabetes.csv'
 raw_data = open(filename, 'r')
 reader = csv.reader(raw_data, delimiter = ',', quoting = csv.QUOTE_NONE)
@@ -22,18 +23,24 @@ print (df.shape)
 # Data types
 print(df.dtypes)
 
-# Descriptive Statistics
+# Descriptive Statistics_________________
 print (df.describe())
 
 # Correlation
 print (df.corr(method = 'pearson'))
 
+# Skewness
+print (df.skew())
 
+# UNIVARIATE PLOTS________________________
 
+# Histograms
+plt.hist(df)
+plt.show()
 
-
-
-
+# Density Plots
+# df.plot(kind = 'density', subplots = True, layout = (3,3), sharex = False)
+# pyplot.show()
 
 
 
