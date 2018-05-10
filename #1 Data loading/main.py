@@ -15,7 +15,7 @@ df.columns = df.iloc[0]
 df = df[1:]
 
 # Convert 'object datatype to 'numeric (float)' datatype
-df = df.apply(pd.to_numeric, downcast = 'float', errors='ignore')
+    df = df.apply(pd.to_numeric, downcast = 'float', errors='ignore')
 
 # Data dimensions
 print (df.shape)
@@ -35,12 +35,12 @@ print (df.skew())
 # UNIVARIATE PLOTS________________________
 
 # Histograms
-plt.hist(df)
+df.hist()
 plt.show()
 
 # Density Plots
 df.plot(kind = 'density', subplots = True, layout = (3,3), sharex = False)
-pyplot.show()
+plt.show()
 
 
 
