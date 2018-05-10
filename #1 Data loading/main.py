@@ -39,8 +39,9 @@ plt.hist(df)
 plt.show()
 
 # Density Plots
-# df.plot(kind = 'density', subplots = True, layout = (3,3), sharex = False)
-# pyplot.show()
+df.plot(kind = 'density', subplots = True, layout = (3,3), sharex = False)
+pyplot.show()
+
 
 
 
