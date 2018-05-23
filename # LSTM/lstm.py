@@ -25,7 +25,27 @@ print ("\n%s: %.2f%%", (model.metrics_names[1], scores[1]*100))
 
 """
 
-# LSTM
+# LSTM - Text generation from Adventuresof machinelearning
+
+import numpy as np
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Dropout
+from keras.layers import LSTM
+from keras.utils import np_utils
+
+filename = "something.txt"
+raw_text = open(filename).read()
+raw_text = raw_text.lower()
+
+chars = sorted(list(set(raw_text)))
+char_to_int = dict((c, i) for i, c in enumerate(chars))
+
+n_chars = len(raw_text)
+n_vocab = len(chars)
+print ("Total Charaterts: ", n_chars)
+print ("Total Vocab: ", n_vocab)
+
 
 
 
