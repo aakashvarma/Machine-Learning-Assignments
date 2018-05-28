@@ -1,4 +1,4 @@
-# Simple Neural Networks
+# Basic (Perceptron) Neural Networks
 
 """
 from keras.models import Sequential
